@@ -1,0 +1,22 @@
+﻿@using Externals_20MCA097.Models
+@model Student
+
+<div class="container">
+    <h1>Add Student</h1>
+
+    @using (Html.BeginForm("AddStudent", "Student", FormMethod.Post, new { Class = "form-group container" }))
+    {
+        @Html.TextBoxFor(a => a.fname, new { Class = "form-control mt-2", PlaceHolder = "Enter Student Name" })
+        @Html.ValidationMessageFor(a => a.fname, "", new { Class = "text-danger" })
+        @Html.TextBoxFor(a => a.course, new { Class = "form-control mt-2", PlaceHolder = "Enter Student Course" })
+        @Html.ValidationMessageFor(a => a.course, "", new { Class = "text-danger" })
+        @Html.TextBoxFor(a => a.year, new { Class = "form-control mt-2", PlaceHolder = "Enter Student Year" })
+        @Html.ValidationMessageFor(a => a.year, "", new { Class = "text-danger" })
+        @Html.TextBoxFor(a => a.Gender, new { Class = "form-control mt-2", PlaceHolder = "Enter Student Gender" })
+        @Html.ValidationMessageFor(a => a.Gender, "", new { Class = "text-danger" })
+        <input type="submit" class="form-control btn btn-dark mt-2" />
+    }
+</div>
+
+
+
